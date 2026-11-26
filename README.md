@@ -4,6 +4,7 @@
 
 - `campus/index.html` と `campus/news/page1.html`～`page3.html`：第９・10回のタグ、class、id、階層、カード、表とページ送り。
 - `stock/index.html` と `stock/S001/page1.html` など：第11回の架空３社の月次株価。
+- `robots.txt`：確認用の写し（クローラーには使われない）。実際に効くのはドメイン直下の https://kondakaz.github.io/robots.txt 。ホスト側を変えたらこの写しも合わせる。
 - `robots-guide.html`：第９回の robots.txt の説明。`private/` は拒否例で、機密情報を置かない。
 
 ## ビルド
