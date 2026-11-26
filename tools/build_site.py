@@ -40,6 +40,6 @@ for j,(code,name,industry) in enumerate(companies):
             rows.append([f'{2022+p}-{m:02}-01',price,10000+j*1500+random.randint(0,1000)])
         links=' '.join(f'<a href="page{k}.html">{k}ページ</a>' for k in range(1,4))
         write(f'stock/{code}/page{p}.html',page(name+'の月次株価','<p>架空データ。日付は月ラベルであり取引日ではない。</p>'+table(['date','close','volume'],rows,'stock-history')+f'<nav>{links}</nav>','../../'))
-write('robots-guide.html',page('robots.txtの解説','''<p>robots.txtは自動アクセスに対する規則であり、利用規約や著作権の許諾そのものではない。</p><p><a href="https://kondakaz.github.io/robots.txt">ホストのrobots.txt</a>を確認する。一般のボットには本教材のprivateディレクトリをDisallowし、Crawl-delayに5秒を指定している。Crawl-delayへの対応はクローラにより異なる。</p><p>BadPracticeBotは全体を拒否する例である。特定のUser-agentの規則は一般規則と別に評価される。公開後にbow()で確認する。</p><p><a href="private/index.html">拒否対象の体験ページ</a></p>'''))
+write('robots-guide.html',page('robots.txtの解説','''<p>robots.txtは自動アクセスに対する規則であり、利用規約や著作権の許諾そのものではない。</p><p>授業で確認するrobots.txt: <a href="https://kondakaz.github.io/jissen-webdata-lecture/robots.txt">https://kondakaz.github.io/jissen-webdata-lecture/robots.txt</a></p><p>「User-agent: *」の組は、本教材のprivateディレクトリをDisallowし、Crawl-delayに5秒を指定している。Crawl-delayへの対応はクローラにより異なる。</p><p>BadPracticeBotは全体を拒否する例である。自分の名乗りに合う専用の組があるプログラムは、その組に従う。Rではpoliteパッケージのbow()で判定を確かめられる。</p><p><a href="private/index.html">拒否対象の体験ページ</a></p>'''))
 write('private/index.html',page('関係者専用の例','<p>robots.txtのDisallowを説明するための架空ページである。機密情報はない。</p>','../'))
 write('.nojekyll','')
