@@ -147,7 +147,7 @@ for j,(code,name,industry) in enumerate(companies):
 write('robots-guide.html', page('robots.txtの解説', '''<p>robots.txtは自動アクセスに対する規則であり、利用規約や著作権の許諾そのものではない。</p>
 <p>授業で確認するrobots.txt: <a href="https://kondakaz.github.io/jissen-webdata-lecture/robots.txt">https://kondakaz.github.io/jissen-webdata-lecture/robots.txt</a></p>
 <p>「User-agent: *」の組は、本教材のprivateディレクトリをDisallowし、Crawl-delayに5秒を指定している。Crawl-delayへの対応はクローラにより異なる。</p>
-<p>BadPracticeBotは全体を拒否する例である。自分の名乗りに合う専用の組があるプログラムは、その組に従う。Rではpoliteパッケージのbow()で判定を確かめられる。</p>
+<p>BadPracticeBotは全体を拒否する例である。自分の名乗りに合う専用の組があるプログラムは、その組に従う。Rではrobotstxtパッケージのpaths_allowed()で判定を確かめられる。</p>
 <p><a href="private/index.html">拒否対象の体験ページ</a></p>'''))
 write('private/index.html',page('関係者専用の例','<p>robots.txtのDisallowを説明するための架空ページである。機密情報はない。</p>','../'))
 write('.nojekyll','')
